@@ -28,7 +28,7 @@ export async function viteSSRMiddleware(app: Application) {
         appType: 'custom',
       });
       app.use(vite.middlewares);
-    } 
+    }
     return vite;
   }
 
@@ -46,9 +46,14 @@ export async function viteSSRMiddleware(app: Application) {
         template = fs.readFileSync(path.resolve('public/index.html'), 'utf-8');
         render = (await import('../ssr/server.mjs')).renderHtml;
       }
-      const appHtml = await render(url);
+      const data = {
+        title: 'hello vite ssr',
+        url,
+      }
+      const appHtml = await render(url, data);
+      const script = `<script>window.__INITIAL_DATA__ = ${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
       if (appHtml !== undefined) {
-        const html = template.replace(`<!--app-html-->`, appHtml);
+        const html = template.replace(`<!--app-html-->`, appHtml).replace(`<!--initial-data-->`, script);
         return res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
       }
     } catch (e: any) {

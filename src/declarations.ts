@@ -18,3 +18,9 @@ export type Application = FeathersApplication<ServiceTypes, Configuration>
 
 // The context for hook functions - can be typed with a service class
 export type HookContext<S = any> = FeathersHookContext<Application, S>
+
+declare global {
+  interface Window {
+    __INITIAL_DATA__: any;  // Replace `any` with the actual type of your data
+  }
+}

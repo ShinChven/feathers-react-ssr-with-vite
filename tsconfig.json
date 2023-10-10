@@ -16,7 +16,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "test"
