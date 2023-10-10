@@ -1,15 +1,11 @@
-import { Link, RouteObject } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 import About from "./pages/About";
+import Home from "./pages/Home";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="/about">About Us</Link>
-      </div>
-    ),
+    element: <Home />,
   },
   {
     path: "/about",
