@@ -1,4 +1,4 @@
-# feathers-vite
+# Feathers React SSR with Vite
 
 > 
 
@@ -24,11 +24,7 @@ This project uses [Feathers](http://feathersjs.com). An open source framework fo
     npm start
     ```
 
-## Testing
-
-Run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
+## Feathers Scaffolding
 
 This app comes with a powerful command line interface for Feathers. Here are a few things it can do:
 
