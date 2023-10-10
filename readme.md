@@ -1,29 +1,39 @@
 # Feathers React SSR with Vite
 
-> 
+> FeathersJS app renders React SSR with Vite.
 
 ## About
 
-This project uses [Feathers](http://feathersjs.com). An open source framework for building APIs and real-time applications.
+This project is a template and a demo for a FeathersJS app integrate a vite React SSR render.
+
+## Features
 
 ## Getting Started
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 2. Install your dependencies
 
-    ```
-    cd path/to/feathers-vite
+    ```bash
     npm install
     ```
+    - `public` folder and `src/ssr` folder will be created once `postinstall` script is executed.
+    - You can also build them manually by running `npm run build:client` and `npm run build:server` respectively, or just run `npm run build` to build both.
 
 3. Start your app
 
-    ```
-    npm run compile # Compile TypeScript source
-    npm run migrate # Run migrations to set up the database
+    ```bash
     npm start
     ```
+    - This will start the FeatherJS server in production mode.
 
+4. Run the app in development mode:
+   
+    ```bash
+    npm run dev
+    ```
+    - NodeJS hot reload is enabled.
+    - Vite `hmr` is enabled, see it in [src/vite/index.ts](/src/vite/index.ts).
+   
 ## Feathers Scaffolding
 
 This app comes with a powerful command line interface for Feathers. Here are a few things it can do:
@@ -33,6 +43,4 @@ $ npx feathers help                           # Show all commands
 $ npx feathers generate service               # Generate a new Service
 ```
 
-## Help
 
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
