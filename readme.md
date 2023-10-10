@@ -78,6 +78,44 @@ npm install @types/react @types/react-dom @types/react-router-dom @vitejs/plugin
 - `src/views/react/server.tsx` is the entry point for the Vite SSR render. It will be built to `src/ssr/server.mjs` for use in production mode.
 - `src/views/react/client.tsx` is the entry point for Vite CSR hydration and is referenced in `index.html`.
 
+### CSS Module Enabled
+
+Vite has [built-in support for CSS Modules](https://vitejs.dev/guide/features.html#css-modules), but you have to install the preprocessors on your own:
+
+```bash
+npm install less less-loader --save-dev
+```
+
+To enable it, you need to add the following configuration to [vite.config.ts](/vite.config.ts):
+
+```ts
+export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      less: {
+        math: "always",
+        relativeUrls: true,
+        javascriptEnabled: true
+      },
+    },
+  }
+})
+```
+
+To use LESS module in your component, you need to:
+
+- Create a LESS file like `index.module.less`. You must use the `.module.less` extension.
+
+- Use it in your component like this:
+
+    ```tsx
+    import styles from './index.module.less'
+
+    export default function Component() {
+      return <div className={styles.container}>Hello World</div>
+    }
+    ```
+
 ## Feathers Scaffolding
 
 This app includes a powerful command-line interface for Feathers. Here are some of the available commands:
