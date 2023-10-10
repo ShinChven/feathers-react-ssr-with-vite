@@ -78,6 +78,14 @@ npm install @types/react @types/react-dom @types/react-router-dom @vitejs/plugin
 - `src/views/react/server.tsx` is the entry point for the Vite SSR render. It will be built to `src/ssr/server.mjs` for use in production mode.
 - `src/views/react/client.tsx` is the entry point for Vite CSR hydration and is referenced in `index.html`.
 
+## React SSR with Data Context
+
+The `DataContext` is a React Context that I use it to store the SSR `initial data`. It is defined in [src/views/react/context.tsx](/src/views/react/context.tsx).
+
+When the App component is wrappred with the `DataContext`, the `initial data` can be accessed in any component through the `useData` hook in `context.tsx`.
+
+And the `initial data` is passed to the client side through the `window.__INITIAL_DATA__` variable in [src/views/react/server.tsx](/src/views/react/server.tsx).
+
 ### CSS Module Enabled
 
 Vite has [built-in support for CSS Modules](https://vitejs.dev/guide/features.html#css-modules), but you have to install the preprocessors on your own:

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import { useData } from "../DataContext"
+import { useData } from "../context"
 import styles from "./Home.module.less"
 
 const Home: React.FC = () => {

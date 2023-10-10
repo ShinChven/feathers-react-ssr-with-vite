@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import './About.css';
-import { useData } from "../DataContext";
+import { useData } from "../context";
 
 const About = () => {
   const data = useData();

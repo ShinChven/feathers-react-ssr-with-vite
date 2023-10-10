@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
-import { DataProvider } from './DataContext';
+import { DataProvider } from './context';
 import routes from './routes';
 
 export async function renderHtml(url: string, data: any): Promise<string | undefined> {

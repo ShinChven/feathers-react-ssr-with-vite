@@ -4,7 +4,7 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import App from './App';
-import { DataProvider } from './DataContext'; // Import DataProvider
+import { DataProvider } from './context'; // Import DataProvider
 
 const initialData = window.__INITIAL_DATA__;  // Access the serialized data
 
