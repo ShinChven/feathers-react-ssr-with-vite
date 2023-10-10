@@ -2,6 +2,7 @@ output/
 lib/
 .vscode/
 /public/
+/src/ssr/
 
 test/config.json
 

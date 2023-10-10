@@ -32,12 +32,15 @@
   "scripts": {
     "dev": "nodemon -x ts-node src/index.ts",
     "compile": "shx rm -rf lib/ && tsc",
+    "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir ./public",
-    "start": "node lib/",
+    "build:server": "vite build --ssr src/views/vite/server.tsx --outDir ./src/ssr",
+    "start": "NODE_ENV=production ts-node src/index.ts",
     "prettier": "npx prettier \"**/*.ts\" --write",
     "mocha": "cross-env NODE_ENV=test mocha test/ --require ts-node/register --recursive --extension .ts --exit",
     "test": "npm run mocha",
-    "bundle:client": "npm run compile && npm pack --pack-destination ./public"
+    "bundle:client": "npm run compile && npm pack --pack-destination ./public",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@feathersjs/adapter-commons": "^5.0.10",

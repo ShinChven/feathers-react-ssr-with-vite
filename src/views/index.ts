@@ -43,9 +43,8 @@ export async function viteSSRMiddleware(app: Application) {
         template = await vite!.transformIndexHtml(url, template);
         render = (await vite!.ssrLoadModule('/src/views/vite/server.tsx')).renderHtml;
       } else {
-        template = fs.readFileSync(path.resolve('index.html'), 'utf-8');
-        // @ts-ignore
-        render = (await import('/src/views/vite/server.tsx')).renderHtml;
+        template = fs.readFileSync(path.resolve('public/index.html'), 'utf-8');
+        render = (await import('../ssr/server.mjs')).renderHtml;
       }
       const appHtml = await render(url);
       if (appHtml !== undefined) {
