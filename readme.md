@@ -53,7 +53,7 @@ See details in [/tsconfig.json](/tsconfig.json).
     "module": "NodeNext",                   // ESM
     "moduleResolution": "NodeNext",         // ESM
     "allowJs": true,                        // Use JavaScript React SSR render code in production
-    "jsx": "react-jsx"                     // Use JSX
+    "jsx": "react-jsx"                      // Use JSX
   },
 }
 ```
@@ -62,7 +62,14 @@ See details in [/tsconfig.json](/tsconfig.json).
 
 `vite` serves as the React bundler and DevServer in this project, it can only be imported through dynamic import, see it in [src/views/index.ts](/src/views/index.ts).
 
-`react`, `react-dom`, `react-router-dom` and `vite` were installed as dependencies, `@vitejs/plugin-react` was installed as devDependencies. Please see them in [package.json](/package.json).
+### Dependencies and devDependencies added:
+    
+```bash
+npm install react react-dom react-router-dom vite --save
+npm install @types/react @types/react-dom @types/react-router-dom @vitejs/plugin-react --save-dev
+```
+
+### Code Structure Explained:
 
 - `index.html` is the template for Vite.
 - `src/views` folder contains the react code.
