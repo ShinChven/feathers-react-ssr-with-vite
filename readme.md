@@ -32,7 +32,7 @@ This project is a template and a demo for a FeathersJS app integrate a vite Reac
     npm run dev
     ```
     - NodeJS hot reload is enabled.
-    - Vite `hmr` is enabled, see it in [src/vite/index.ts](/src/vite/index.ts).
+    - Vite `hmr` is enabled, see it in [src/views/vite/index.ts](/src/views/vite/index.ts).
    
 ## Feathers Scaffolding
 
