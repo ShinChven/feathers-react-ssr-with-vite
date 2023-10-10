@@ -1,5 +1,5 @@
 {
-  "name": "feathers-vite",
+  "name": "feathers-react-ssr-over-vite",
   "description": "",
   "version": "0.0.0",
   "homepage": "",
@@ -7,7 +7,13 @@
   "keywords": [
     "feathers"
   ],
-  "author": {},
+  "author": {
+    "name": "ShinChven",
+    "email": "shinchven@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/ShinChven/feathers-react-ssr-over-vite.git"
+  },
   "contributors": [],
   "bugs": {},
   "engines": {
