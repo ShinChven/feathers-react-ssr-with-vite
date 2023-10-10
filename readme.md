@@ -84,7 +84,7 @@ The `DataContext` is a React Context that I use it to store the SSR `initial dat
 
 When the App component is wrappred with the `DataContext`, the `initial data` can be accessed in any component through the `useData` hook in `context.tsx`.
 
-And the `initial data` is passed to the client side through the `window.__INITIAL_DATA__` variable in [src/views/react/server.tsx](/src/views/react/server.tsx).
+And the `initial data` is passed to the client side through the `window.__INITIAL_DATA__` placeholder in [src/views/react/server.tsx](/src/views/react/server.tsx). Please see the [index.html](/index.html) for details about how it is used.
 
 ### CSS Module Enabled
 
