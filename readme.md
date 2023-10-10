@@ -6,6 +6,8 @@
 
 This project is a template and a demo for a FeathersJS app integrate a vite React SSR render.
 
+FeathersJS is a NodeJS framework for building RESTful APIs, real-time applications, and modern microservices. It is built on top of ExpressJS and Socket.io.
+
 ## Features
 
 ## Getting Started
