@@ -32,6 +32,7 @@
   "scripts": {
     "dev": "nodemon -x ts-node src/index.ts",
     "compile": "shx rm -rf lib/ && tsc",
+    "build:client": "vite build --outDir ./public",
     "start": "node lib/",
     "prettier": "npx prettier \"**/*.ts\" --write",
     "mocha": "cross-env NODE_ENV=test mocha test/ --require ts-node/register --recursive --extension .ts --exit",
@@ -59,10 +60,11 @@
   "devDependencies": {
     "@feathersjs/cli": "^5.0.10",
     "@feathersjs/rest-client": "^5.0.10",
-    "@types/react": "^18.2.27",
-    "@types/react-dom": "^18.2.12",
     "@types/mocha": "^10.0.2",
     "@types/node": "^20.8.4",
+    "@types/react": "^18.2.27",
+    "@types/react-dom": "^18.2.12",
+    "@vitejs/plugin-react": "^4.1.0",
     "axios": "^1.5.1",
     "cross-env": "^7.0.3",
     "mocha": "^10.2.0",

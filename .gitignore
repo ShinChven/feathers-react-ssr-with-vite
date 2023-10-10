@@ -1,6 +1,7 @@
 output/
 lib/
 .vscode/
+/public/
 
 test/config.json
 
