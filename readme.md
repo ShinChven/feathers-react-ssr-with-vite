@@ -4,7 +4,7 @@
 
 ## About
 
-This project is a template and a demo for a FeathersJS app integrate a vite React SSR render.
+This project is a template and a demo for a FeathersJS app that integrates Vite for React SSR rendering.
 
 FeathersJS is a NodeJS framework for building RESTful APIs, real-time applications, and modern microservices. It is built on top of ExpressJS and Socket.io.
 
@@ -18,7 +18,7 @@ FeathersJS is a NodeJS framework for building RESTful APIs, real-time applicatio
     ```bash
     npm install
     ```
-    - `public` folder and `src/ssr` folder will be created once `postinstall` script is executed.
+    - The `public` and `src/ssr` folders will be created once the `postinstall` script is executed.
     - You can also build them manually by running `npm run build:client` and `npm run build:server` respectively, or just run `npm run build` to build both.
 
 3. Start your app
@@ -27,7 +27,7 @@ FeathersJS is a NodeJS framework for building RESTful APIs, real-time applicatio
     npm run build && npm run compile # This only needs to be run once
     npm start
     ```
-    - This will start the FeatherJS server in production mode.
+    - This will start the FeathersJS server in production mode.
 
 4. Run the app in development mode:
    
@@ -36,7 +36,7 @@ FeathersJS is a NodeJS framework for building RESTful APIs, real-time applicatio
     npm run dev
     ```
     - NodeJS hot reload is enabled.
-    - Vite `hmr` is enabled, see it in [src/views/react/index.ts](/src/views/react/index.ts).
+    - Vite's `hmr` is enabled. See it in [src/views/react/index.ts](/src/views/react/index.ts).
 
 ## FeathersJS Project Configured
 
@@ -60,7 +60,7 @@ See details in [/tsconfig.json](/tsconfig.json).
 
 ## Vite React SSR Configured
 
-`vite` serves as the React bundler and DevServer in this project, it can only be imported through dynamic import, see it in [src/views/index.ts](/src/views/index.ts).
+`vite` serves as the React bundler and DevServer in this project. It can only be imported through dynamic imports. See it in [src/views/index.ts](/src/views/index.ts).
 
 ### Dependencies and devDependencies added:
     
@@ -72,19 +72,17 @@ npm install @types/react @types/react-dom @types/react-router-dom @vitejs/plugin
 ### Code Structure Explained:
 
 - `index.html` is the template for Vite.
-- `src/views` folder contains the react code.
-- `src/views/public` folder contains the static files for development, it will be build to `public`, `DO NOT` place anything in `public`, for all will be removed once rebuilt.
-- `src/views/index.ts` setup a vite DevServer and a vite SSR render.
-- `src/views/react/server.tsx` is the entry point for vite SSR render, it will be built to `src/ssr/server.mjs` to be used in production mode.
-- `src/views/react/client.tsx` is the entry point for vite CSR hydration, it was referenced in `index.html`.
+- The `src/views` folder contains the react code.
+- The `src/views/public` folder contains static files for development. These will be built into the `public` directory. `DO NOT` place anything directly in `public` as its contents will be removed upon rebuilding.
+- `src/views/index.ts` sets up a Vite DevServer and a Vite SSR render.
+- `src/views/react/server.tsx` is the entry point for the Vite SSR render. It will be built to `src/ssr/server.mjs` for use in production mode.
+- `src/views/react/client.tsx` is the entry point for Vite CSR hydration and is referenced in `index.html`.
 
 ## Feathers Scaffolding
 
-This app comes with a powerful command line interface for Feathers. Here are a few things it can do:
+This app includes a powerful command-line interface for Feathers. Here are some of the available commands:
 
 ```
 $ npx feathers help                           # Show all commands
 $ npx feathers generate service               # Generate a new Service
 ```
-
-
