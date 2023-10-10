@@ -7,7 +7,7 @@ export default defineConfig({
   ssr: {
     noExternal: ['react-router-dom', 'node']
   },
-  publicDir: 'src/views/vite/public',
+  publicDir: 'src/views/public',
   build: {
     minify: true,
   },
