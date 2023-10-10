@@ -18,7 +18,7 @@ import { channels } from './channels'
 import { logError } from './hooks/log-error'
 import { logger } from './logger'
 import { services } from './services/index'
-import { viteSSRMiddleware } from './views'
+import { viteSSRMiddleware } from './views/index'
 
 const app: Application = express(feathers())
 

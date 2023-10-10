@@ -33,6 +33,31 @@ This project is a template and a demo for a FeathersJS app integrate a vite Reac
     ```
     - NodeJS hot reload is enabled.
     - Vite `hmr` is enabled, see it in [src/views/vite/index.ts](/src/views/vite/index.ts).
+
+## FeathersJS Project Configured
+
+Based on a standard FeathersJS template, this project has been configured to support: 
+- ESM
+- JavaScript
+- Dynamic import
+- JSX
+
+See details in [/tsconfig.json](/tsconfig.json).
+
+```json5
+{
+  "compilerOptions": {
+    "module": "NodeNext",                   // ESM
+    "moduleResolution": "NodeNext",         // ESM
+    "allowJs": true,                        // Use JavaScript React SSR render code
+    "jsx": "react-jsx",                     // Use JSX
+    "allowImportingTsExtensions": true,     // Dynamic import
+    "noEmit": true,                         // No emit for Dynamic import
+  },
+}
+```
+
+
    
 ## Feathers Scaffolding
 

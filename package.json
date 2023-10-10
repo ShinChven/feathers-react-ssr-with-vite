@@ -41,7 +41,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir ./public",
     "build:server": "vite build --ssr src/views/vite/server.tsx --outDir ./src/ssr",
-    "start": "NODE_ENV=production ts-node src/index.ts",
+    "start": "NODE_ENV=production node lib",
     "prettier": "npx prettier \"**/*.ts\" --write",
     "mocha": "cross-env NODE_ENV=test mocha test/ --require ts-node/register --recursive --extension .ts --exit",
     "test": "npm run mocha",
